@@ -77,13 +77,14 @@ public class MainActivity extends AppCompatActivity {
 
             char[] flames = {'F','L','A','M','E','S'};
 
-            int sub = noteSame%6;
-            int div = noteSame/6;
-            if(sub>0) {
-                for (int i = 1; i <= div; i++) {
-                    noteSame -= 6;
-                }
+            int mod = noteSame%6;
+            if(mod==0){
+                noteSame = 6;
             }
+            if(mod>0) {
+                noteSame = mod;
+            }
+            
             switch (flames[noteSame-1]){
                 case 'F' :
                     flamesAns.setText("YOU ARE FRIENDZONED!!");
