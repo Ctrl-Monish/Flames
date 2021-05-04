@@ -69,23 +69,22 @@ public class MainActivity extends AppCompatActivity {
                         totalfreq[i] = name2freq[i] - name1freq[i];
                 }
             }
-            int noteSame = 0;
+            int notSame = 0;
             for (int i=0; i<totalfreq.length; i++){ //to find total number of not same characters
-                noteSame += totalfreq[i];
+                notSame += totalfreq[i];
             }
-            System.out.println(noteSame);
 
-            char[] flames = {'F','L','A','M','E','S'};
-
-            int mod = noteSame%6;
+            System.out.println(notSame);
+            int mod = notSame%6;
             if(mod==0){
-                noteSame = 6;
+                notSame = 6;
             }
             if(mod>0) {
-                noteSame = mod;
+                notSame = mod;
             }
-            
-            switch (flames[noteSame-1]){
+
+            char[] flames = {'F','L','A','M','E','S'};
+            switch (flames[notSame-1]){
                 case 'F' :
                     flamesAns.setText("YOU ARE FRIENDZONED!!");
                     break;
